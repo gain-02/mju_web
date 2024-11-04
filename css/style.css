@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+/* 
+* {
+  font-family: "Quicksand", sans-serif;
+} */
+
+* {
+  font-family: "Pretendard Variable", sans-serif;
+}
+
+.top-navi {
+  background-color: white;
+  width: 100%;
+  height: 76px;
+  border-bottom: 1px solid #524545;
+  /* align-items: center; */
+  position: relative;
+}
+
+.symbol {
+  height: 42px;
+  position: absolute;
+  left: 60px;
+  /* margin-top: auto;
+  margin-bottom: auto; */
+  top: 16px;
+}
+
+.menu-box {
+  position: relative;
+  left: 172px;
+  top: 24px;
+  display: inline-block;
+  /* margin-top: auto;
+  margin-bottom: auto; */
+}
+
+.top-menu {
+  font-family: "Quicksand", sans-serif;
+  position: relative;
+  font-size: 24px;
+  color: #978f8f;
+  display: inline-block;
+  margin-left: 16px;
+  margin-right: 16px;
+  font-weight: 100;
+}
+
+.top-menu.select {
+  color: #524545;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.search {
+  position: absolute;
+  display: inline-block;
+  left: 600px;
+  top: 18px;
+  border-radius: 20px;
+  width: 360px;
+  height: 40px;
+  border: 1px solid #978f8f;
+}
+
+.search-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 16px;
+  top: 7px;
+}
+
+.badge-box {
+  position: absolute;
+  right: 60px;
+}
+
+.badge {
+  border-radius: 20px;
+  border: 1px solid #756a6a;
+  height: 30px;
+  width: 90px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 16px;
+  line-height: 26px;
+}
+
+.badge.white {
+  font-weight: 400;
+  color: #2a2a2a;
+  background-color: white;
+}
+
+.badge.brown {
+  font-weight: 300;
+  color: white;
+  background-color: #524545;
+}
+
+.page-padding {
+  padding-left: 172px;
+  padding-right: 172px;
+  padding-top: 100px;
+}
+
+.bg-white {
+  background-color: #fcfbfb;
+}
+
+.bg-brown {
+  background-color: #524545;
+}
+
+.section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: 500px;
+}
+
+.title-text {
+  font-size: 32px;
+  font-weight: 600;
+  color: #524545;
+}
+
+.logo {
+  margin-top: 50px;
+  height: 200px;
+  opacity: 15%;
+  font-size: 16px;
+  color: #2a2a2a;
+}
+
+.intro-text {
+  position: absolute;
+  right: 800px;
+}
+
+.vertical-image {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  display: inline-block;
+  /* top: 0px;
+  right: 0px; */
+}
+
+/* flex를 공부하던가.. absolute로 고정하소서 */
