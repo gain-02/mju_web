@@ -9,6 +9,10 @@
   font-family: "Pretendard Variable", sans-serif;
 }
 
+.Quick-sand {
+  font-family: "Quicksand", sans-serif;
+}
+
 .top-navi {
   background-color: white;
   width: 100%;
@@ -101,33 +105,71 @@
   background-color: #524545;
 }
 
-.page-padding {
-  padding-left: 172px;
-  padding-right: 172px;
-  padding-top: 100px;
-}
-
 .bg-white {
   background-color: #fcfbfb;
+  padding-top: 80px;
+  padding-left: 172px;
+  padding-right: 172px;
 }
 
 .bg-brown {
   background-color: #524545;
+  padding-left: 172px;
+  padding-right: 172px;
+  padding-bottom: 100px;
 }
 
 .section {
   padding-top: 30px;
   padding-bottom: 30px;
-  height: 500px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .title-text {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
+}
+
+.title-text-small {
+  font-size: 16px;
+  font-weight: 200;
+  margin-top: 20px;
+}
+
+.brown-text {
   color: #524545;
 }
 
+.white-text {
+  color: white;
+}
+
+.title-text.maintext {
+  font-size: 32px;
+  font-weight: 600;
+  color: #524545;
+  text-align: left;
+}
+
+.left-box {
+  width: 780px;
+  position: absolute;
+  height: 600px;
+}
+
+.right-box {
+  width: 560px;
+  position: absolute;
+  height: 600px;
+  right: 172px;
+  overflow: hidden;
+}
+
 .logo {
+  position: absolute;
+  top: 240px;
   margin-top: 50px;
   height: 200px;
   opacity: 15%;
@@ -135,18 +177,394 @@
   color: #2a2a2a;
 }
 
-.intro-text {
-  position: absolute;
-  right: 800px;
+.scrolling-image {
+  position: absolute; /* 절대 위치 설정 */
+  bottom: 0; /* 아래쪽에서 시작 */
+  left: 0;
+  height: 200%; /* 두 이미지를 포함하기 위해 높이를 200%로 설정 */
+  animation: scroll 8s linear infinite; /* 애니메이션 추가 */
 }
 
-.vertical-image {
-  position: absolute;
-  width: 500px;
+@keyframes scroll {
+  0% {
+    transform: translateY(0); /* 시작 위치 (첫 번째 이미지) */
+  }
+  100% {
+    transform: translateY(-67%); /* 두 번째 이미지가 올라가는 위치 */
+  }
+  /* 100% {
+    transform: translateY(-50%); /* 마지막 위치 유지 */
+  /* }  */
+}
+
+.vertical-img {
+  width: 100%; /* 너비 100% */
+  height: auto; /* 비율에 맞게 높이 자동 조정 */
+  object-fit: cover; /* 부모 박스에 맞게 이미지를 조정, 잘림 허용 */
+}
+
+.intro-text {
+  margin-top: 460px;
+  text-align: right;
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 160%;
+}
+
+.white-01 {
+  height: 700px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.white-02,
+.white-03,
+.white-04,
+.white-05 {
+  text-align: center;
+}
+
+.white-04 {
+  height: 680px;
+}
+
+.line {
+  border-bottom: 1.5px solid #dcdada;
+  width: 780px;
+  height: 20px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.brown-01,
+.brown-03 {
+  text-align: left;
+}
+
+.brown-02 {
+  text-align: right;
+}
+
+.keyword-section {
+  height: 480px;
+  width: 1200px;
+  text-align: center;
+  margin: auto;
+}
+
+.graph-section {
   height: 500px;
+  width: 1200px;
+  text-align: center;
+  margin: auto;
+  display: flex;
+}
+
+.keyword-box {
+  height: 480px;
+  width: 370px;
+  text-align: center;
   display: inline-block;
-  /* top: 0px;
-  right: 0px; */
+  vertical-align: top;
+  padding-top: 40px;
+}
+
+.graph-box {
+  height: 480px;
+  width: 500px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 10px;
+  margin: 20px;
+}
+
+.keyword {
+  text-align: center;
+  height: 220px;
+  width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #dcdada;
+  border-radius: 35px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.keyword-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #524545;
+  margin: 8px;
+}
+
+.keyword-eng {
+  font-size: 24px;
+  font-weight: 200;
+  color: #978f8f;
+  margin: 8px;
+}
+
+.keyword-text {
+  font-size: 16px;
+  font-weight: 200;
+  color: #524545;
+  margin-top: 40px;
+  letter-spacing: -0.2;
+  line-height: 160%;
+}
+
+.bonda-box {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  margin: 50px;
+}
+
+.bonda-name {
+  height: 200px; /* 초기 크기 200px */
+  width: 200px; /* 초기 크기 200px */
+  border-radius: 50%; /* 동그라미 모양 */
+  border: 1px solid #dcdada;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease; /* 부드러운 애니메이션 */
+}
+
+.bonda-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: #524545;
+  margin: 0;
+  line-height: 1;
+  transition: opacity 0.3s ease;
+}
+
+.bonda-text {
+  font-size: 18px;
+  font-weight: 200;
+  color: #978f8f;
+  margin-top: 10px;
+  line-height: 160%;
+  position: absolute;
+  top: 50%; /* 중앙에 위치 */
+  left: 50%; /* 중앙에 위치 */
+  transform: translate(-50%, -50%);
+  visibility: hidden; /* 텍스트는 처음에는 보이지 않음 */
+  opacity: 0; /* 텍스트는 처음에 완전히 투명 */
+  width: 350px; /* 텍스트의 너비를 고정값으로 설정 */
+  white-space: normal; /* 줄 바꿈을 그대로 유지 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.bonda-name:hover {
+  height: 350px; /* 호버 시 크기 증가 */
+  width: 350px; /* 호버 시 크기 증가 */
+}
+
+.bonda-name:hover .bonda-title {
+  opacity: 0; /* 호버 시 타이틀은 사라짐 */
+}
+
+.bonda-name:hover .bonda-text {
+  visibility: visible; /* 텍스트는 보이게 설정 */
+  opacity: 1; /* 텍스트가 불투명해짐 */
+}
+
+.b01-img-section {
+  height: 620px;
+  width: 1200px;
+  display: flex;
+  justify-content: space-around; /* 사진 간격을 균등하게 분배 */
+  align-items: center; /* 기본 수직 정렬을 중앙에 맞춤 */
+  padding-top: 120px;
+  padding-bottom: 40px;
+  margin: auto;
+}
+
+.b01-img {
+  position: relative; /* 오버레이를 배치하기 위해 position: relative 사용 */
+  height: 400px;
+  width: 290px;
+  border-radius: 20px;
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+}
+
+.b01-img img {
+  height: 395px;
+  width: 287px;
+  border-radius: 12px;
+}
+
+.b01-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99%;
+  background-color: black;
+  opacity: 0;
+  border-radius: 12px;
+  transition: opacity 0.3s;
+  display: flex; /* 텍스트 중앙 정렬을 위한 flex 설정 */
+  justify-content: center;
+  align-items: center;
+  color: white; /* 텍스트 색상 */
+  font-size: 18px; /* 텍스트 크기 */
+  font-weight: bold; /* 텍스트 굵기 */
+}
+
+.b01-img:hover .b01-overlay {
+  opacity: 0.7; /* 호버 시 오버레이 투명도 변경 */
+}
+
+.b01-img.up {
+  margin-top: -50px; /* 위쪽으로 약간 이동 */
+}
+
+.b01-img.down {
+  margin-top: 50px; /* 아래쪽으로 약간 이동 */
+}
+
+.b02-img-section {
+  height: 700px;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: auto;
+  margin-top: 40px;
+  text-align: center;
+  position: relative; /* 부모 요소를 기준으로 절대 위치를 설정 */
+}
+
+.b02-block {
+  height: 70%;
+  border-radius: 20px;
+  position: absolute; /* 박스를 절대 위치로 배치 */
+  left: 50%; /* 가운데 정렬 */
+  transform: translateX(-50%); /* 수평 가운데 정렬 보정 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.b03-img-section {
+  height: 700px;
+  width: 1200px;
+  display: flex;
+  justify-content: space-around; /* 사진 간격을 균등하게 분배 */
+  align-items: center; /* 기본 수직 정렬을 중앙에 맞춤 */
+  padding-top: 10px;
+  padding-bottom: 40px;
+  margin: auto;
+}
+
+.b03-img {
+  height: 400px;
+  width: 290px;
+  border-radius: 20px;
+  display: inline-block;
+  text-align: left;
+  margin: auto;
+}
+
+.book-title {
+  font-size: 20px;
+  font-weight: 500px;
+  color: white;
+  margin-top: 24px;
+}
+
+.book-text {
+  font-size: 15px;
+  font-weight: 200;
+  color: white;
+  margin-top: 18px;
+  letter-spacing: -0.2;
+  line-height: 160%;
+}
+
+.tag-box {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.tag {
+  border-radius: 20px;
+  border: 1px solid #756a6a;
+  height: 28px;
+  width: 90px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 16px;
+  line-height: 26px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tag.white {
+  font-weight: 400;
+  color: #2a2a2a;
+  background-color: white;
+}
+
+.tag.brown {
+  border: 1px solid white;
+  font-weight: 300;
+  color: white;
+  background-color: #524545;
+}
+
+/* 호버 시 색상 변경 */
+.tag:hover {
+  color: #524545;
+  background-color: white;
+  border-color: #524545;
+}
+
+/* 클릭 시 색상 변경 (선택된 태그) */
+.tag.selected {
+  color: #524545;
+  background-color: white;
+  border-color: #524545;
+}
+
+.highlight-section {
+  position: relative;
+  display: inline-block;
+}
+
+.highlighted-text {
+  position: relative;
+  z-index: 1; /* 텍스트가 위에 오도록 설정 */
+  text-align: center;
+  font-size: 46px;
+  font-weight: lighter;
+  margin: 40px;
+}
+
+.highlight-box {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  height: 20%; /* 텍스트의 절반을 덮는 높이 설정 */
+  width: 0;
+  background-color: #ffb4ab; /* 형광펜 색상 */
+  z-index: 0; /* 텍스트보다 뒤에 위치 */
+  transition: width 1.5s ease; /* 애니메이션 효과 */
+}
+
+.highlight-section.active .highlight-box {
+  width: 100%; /* 활성화 시 전체 너비로 확장 */
 }
 
 /* flex를 공부하던가.. absolute로 고정하소서 */

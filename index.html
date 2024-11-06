@@ -6,7 +6,15 @@
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
       crossorigin="anonymous"
     ></script>
-    <!-- highchart Load -->
+    <!-- highchart load -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <!-- <div id="graph-04-container"></div> -->
+  </figure>
     <!-- CSS Load -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -29,33 +37,207 @@
         <div class="badge brown">KOR</div>
       </div>
     </div>
-    <div class="page-padding">
       <div class="bg-white">
         <div class="section white-01">
-          <div class="title-text">오늘 필요한 나의 감성은 무엇인가요?</div>
-          <!-- <div class="vertical-image">하이</div> -->
-          <img class="logo" src="img/Logo.png" />
-          <!-- <div class="intro-text">
+          <img class="logo" src="img/Logo.png" style="z-index: 0;" />
+          <div class="left-box">
+          <div class="title-text maintext">
+            오늘 필요한 나의 감성은 무엇인가요?
+          </div>
+          <div class="intro-text">
         책은 단순히 물리적 취향만을 반영하는 아이템과는 달리 사용자의 정신적 ∙
-        감정적 취향을 담아내며, 가치관 형성이나 고민 해결 등으로 삶에 깊은
-        영감을 줄 수 있는 특별한 매체입니다. 그 중에서도 독립 서적은 대형
-        출판물보다 작가의 개성과 독창성이 더 강하게 드러나기 때문에 밀도 높은
+        감정적 취향을 담아내며,<br/> 가치관 형성이나 고민 해결 등으로 삶에 깊은
+        영감을 줄 수 있는 특별한 매체입니다.<br/>그 중에서도 독립 서적은 대형
+        출판물보다 작가의 개성과 독창성이 더 강하게 드러나기 때문에<br/>밀도 높은
         감정적 교류와 소통이 가능하고, 더 개인적이고 특별한 큐레이션이 가능하게
         만들어 줍니다.
-      </div> -->
+        </div>
+        </div>
+        <div class="right-box">
+          <div class="scrolling-image">
+          <img src="img/w01.png" class="vertical-img"/>
+          <img src="img/w01.png" class="vertical-img"/> 
+          <img src="img/w01.png" class="vertical-img"/> 
+
         </div>
       </div>
-      <div class="section white-02"></div>
-      <div class="section white-03"></div>
-      <div class="section white-04"></div>
-      <div class="section white-05"></div>
+      </div>
+      <div class="section white-02">
+        <div class="title-text brown-text">
+          다양한 가치의 발견을 통해 세계를 확장시켜 일상의 깊이를 더해줄
+        </div>
+        <div class="line"></div>
+        <div class="keyword-section">
+          <div class="keyword-box">
+            <div class="keyword">
+              <div class="keyword-title">뜻밖의 발견</div>
+              <div class="keyword-eng">Serendipity</div>
+            </div>
+            <div class="keyword-text">
+              탐색 과정에서 예상치 못한<br/>독특한 콘텐츠와 순간들을 만나며  감동을 얻고,<br/> 자신만의 새로운 취향을 찾아갈 수 있도록
+            </div>
+          </div>
+          <div class="keyword-box">
+            <div class="keyword">
+              <div class="keyword-title">연결</div>
+              <div class="keyword-eng">Connection</div>
+            </div>
+            <div class="keyword-text">
+              개인의 독특한 경험과 가치를 반영하는<br/>독립출판물을 통해 나와 타인의 이야기를 연결해<br/>새로운 시각과 감동을 얻도록
+            </div>
+          </div>
+          <div class="keyword-box">
+            <div class="keyword">
+              <div class="keyword-title">몰입</div>
+              <div class="keyword-eng">Immersion</div>
+            </div>
+            <div class="keyword-text">
+              특유의 개성을 가진 독립출판 및 공간을 만나는<br/>과정을 통해 자신만의 몰입감을 느끼며<br/>일상에 새로운 의미를 부여할 수 있게
+            </div>
+          </div> 
+        </div>
+      </div>
+      <div class="section white-03">
+        <div class="title-text brown-text">
+          고유의 공간을 경험하고, 다양한 라이프스타일을 발견하며
+        </div>
+        <div class="line"></div>
+        <div class="graph-section">
+          <div class="graph-box" id="graph-01"></div>
+          <div class="graph-box" id="graph-02" style="margin-left: 40px;" ></div>
+        </div>
+      </div>
+      <div class="section white-04" style="position: relative; z-index: 10;">
+        <div class="title-text brown-text">
+          성장하고 있는 독립출판 시장에 함께 하는
+        </div>
+        <div class="line"></div>
+        <div class="graph-section">
+          <div class="graph-box" id="graph-03"></div>
+          <div class="graph-box" id="graph-04" style="margin-left: 40px;"></div>
+        </div>
+      </div>
+      
+      <div class="section white-05">
+        <div class="title-text brown-text">
+          <div class="Quick-sand" style="display: inline-block">Bonda</div>
+          를 보다
+        </div>
+        <div class="line"></div>
+        <div class="keyword-section">
+          <div class="bonda-box">
+            <div class="bonda-name">
+              <div class="bonda-title">B</div>
+              <div class="bonda-text"> 책을 뜻하는 단어 Book <br/>책을 중심으로 연결되는 우리의 이야기</div>
+            </div>
+          </div>
+          <div class="bonda-box">
+            <div class="bonda-name">
+              <div class="bonda-title">Onda</div>
+              <div class="bonda-text">스페인어로 물결을 뜻하는 단어 <br/>서점과 독서 후에 이어지는 감정과 흐름</div>
+            </div>
+          </div>
+        </div>
+        <div class="highlight-section">
+          <div class="highlighted-text">
+            뜻밖의 순간이 만들어줄, 당신의 이야기
+          </div>
+          <div class="highlight-box"></div>
+        </div>
+        
+      </div>
     </div>
     <img src="img/bg-wave.png" style="width: 100%" />
-
     <div class="bg-brown">
-      <div class="section brown-01"></div>
-      <div class="section brown-02"></div>
-      <div class="section brown-03"></div>
-    </div>
+      <div class="section brown-01">
+        <div class="sub-title-box">
+          <div class="title-text white-text"># 시간이 지나도 기억에 남는</div>
+          <div class="title-text-small white-text">공간에서 느껴지는 분위기와 감성을 경험하다</div>
+          <div class="tag-box">
+            <div class="tag brown selected" id="all">All</div>
+            <div class="tag brown">Book</div>
+            <div class="tag brown">Life</div>
+            <div class="tag brown">Art</div>
+            <div class="tag brown">Music</div>
+            <div class="tag brown">Coffee</div>
+          </div>
+
+          <div class="b01-img-section">
+            <div class="b01-img up">
+              <img src="img/b01-img-01.png" />
+              <div class="b01-overlay">유어마인드</div> <!-- 오버레이 요소 추가 -->
+            </div>
+            <div class="b01-img down">
+              <img src="img/b01-img-02.png" />
+              <div class="b01-overlay">B flatform</div> <!-- 오버레이 요소 추가 -->
+            </div>
+            <div class="b01-img up">
+              <img src="img/b01-img-03.png" />
+              <div class="b01-overlay">땡스북스</div> <!-- 오버레이 요소 추가 -->
+            </div>
+            <div class="b01-img down">
+              <img src="img/b01-img-04.png" />
+              <div class="b01-overlay">스페인책방</div> <!-- 오버레이 요소 추가 -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section brown-02">
+        <div class="title-text white-text">
+          # 누구보다 개인적인, 누구보다 솔직한
+        </div>
+        <div class="title-text-small white-text">
+          책 속에 숨겨진 이야기, 작가의 삶, 그 모든 이야기를 듣다
+        </div>
+        <div class="b02-img-section">
+          <div class="b02-block" style="background-color: #DCDADA; width: 700px; z-index: 2; position: absolute; top: 60px; left: 50%; transform: translateX(-50%);"></div>
+          <div class="b02-block" style="background-color: #978F8F; width: 500px; z-index: 1; position: absolute; top: 30px; left: 50%; transform: translateX(-50%);"></div>
+          <img src="img/b02-img-01.png" style="height: 540px; border-radius: 20px; display: block; margin: auto; margin-top: 70px; z-index: 3; position: relative; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);"/>
+        </div>
+      </div>
+      <div class="section brown-03">
+        <div class="title-text white-text"># 타인의 삶을 읽으며</div>
+        <div class="title-text-small white-text">
+          우리가 만나지 못한 다른 이야기들을 이해하다
+        </div>
+        <div class="b03-img-section" style="margin-bottom: 60px;">
+          <div class="b03-img">
+            <img src="img/book-01.png" style="height: 250px; border-radius: 2px; margin-top: 0px"/>
+            <div class="book-title">
+              <u>가슴에 심는 사랑 씨앗 한 알</u>
+            </div>
+            <div class="book-text">
+              아름다움을 발견하지 못한 채 서로에게 아무런<br/>의미가 되지 못하고 지나치게 되는 것
+            </div>
+          </div>
+          <div class="b03-img">
+            <img src="img/book-02.png" style="height: 250px; border-radius: 2px; margin-top: 260px"/>
+            <div class="book-title">
+              <u>시로 읽는 마음, 그 기록과 응답</u>
+            </div>
+            <div class="book-text">
+              읽으면서 즐거움을 느꼈던 시의 리뷰와 함께<br/>기록을 남겨두자는 시에 대한 다정한 마음으로
+            </div>
+          </div>
+          <div class="b03-img">       
+            <img src="img/book-03.png" style="height: 250px; border-radius: 2px; margin-top: -70px"/>
+            <div class="book-title">
+              <u>존재를 관통하는 사랑에 대한</u>
+            </div>
+            <div class="book-text">
+              그들은 서로 사랑했는데도<br/>상대방에게 하나의 지옥을 선사했다
+            </div>
+          </div>  
+          <div class="b03-img">
+            <img src="img/book-04.png" style="height: 250px; border-radius: 2px; margin-top: 100px;"/>
+            <div class="book-title">
+              <u>장소와 공간으로서의 집</u>
+            </div>
+            <div class="book-text">
+              한 사람의 내면에 단단하게 쌓아올려진<br/>집과 방에 관한 낯설고 친밀한 이야기
+            </div>
+          </div> 
+        </div>
+      </div>
   </body>
 </html>
