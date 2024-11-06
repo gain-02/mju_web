@@ -455,13 +455,13 @@
   transform: translateX(-50%); /* 수평 가운데 정렬 보정 */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-
+/* 
 .b03-img-section {
   height: 700px;
   width: 1200px;
   display: flex;
-  justify-content: space-around; /* 사진 간격을 균등하게 분배 */
-  align-items: center; /* 기본 수직 정렬을 중앙에 맞춤 */
+  justify-content: space-around; 
+  align-items: center;
   padding-top: 10px;
   padding-bottom: 40px;
   margin: auto;
@@ -490,6 +490,38 @@
   margin-top: 18px;
   letter-spacing: -0.2;
   line-height: 160%;
+} */
+
+.b03-img-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  position: relative;
+  padding-top: 50px; /* 섹션 타이틀과 겹치지 않도록 여백 추가 */
+}
+
+.b03-img {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.2s ease-out; /* 더 자연스러운 이동 */
+  width: 250px; /* 크기 지정 */
+}
+
+.book-title {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+  margin-top: 10px;
+  color: white;
+}
+
+.book-text {
+  font-size: 14px;
+  text-align: left;
+  margin-top: 10px;
+  font-weight: 200;
+  line-height: 1.5;
+  color: white;
 }
 
 .tag-box {

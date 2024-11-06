@@ -558,4 +558,30 @@ $(document).ready(function () {
       tag.classList.add("selected");
     });
   });
+
+  document.addEventListener("mousemove", function (event) {
+    const b03Imgs = document.querySelectorAll(".b03-img");
+    const mouseX = event.clientX; // 마우스 X 좌표값
+    const mouseY = event.clientY; // 마우스 Y 좌표값
+
+    const section = document.querySelector(".b03-img-section");
+    const sectionRect = section.getBoundingClientRect(); // 섹션의 위치 및 크기 값 가져오기
+    const sectionTop = sectionRect.top;
+    const sectionBottom = sectionRect.bottom;
+    const sectionLeft = sectionRect.left;
+    const sectionRight = sectionRect.right;
+
+    b03Imgs.forEach((img, index) => {
+      // X, Y 좌표를 기준으로 각 이미지의 위치 이동 (변수 추가 및 방향 수정)
+      const rangeX = (mouseX - (sectionLeft + sectionRight) / 2) / 30; // X 이동 범위 증가
+      const rangeY = (mouseY - (sectionTop + sectionBottom) / 2) / 15; // Y 이동 범위 감소
+
+      // 방향을 다르게 설정 (X는 원래 방향, Y는 반대로)
+      const translateX = rangeX * (index + 1); // 각 이미지마다 다르게 이동
+      const translateY = -rangeY * (index + 1); // Y 값 반대로 이동
+
+      // 자연스럽게 움직이도록 적용
+      img.style.transform = `translate(${translateX}px, ${translateY}px)`;
+    });
+  });
 });
