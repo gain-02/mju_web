@@ -21,8 +21,7 @@
     <!-- my script load -->
     <script src="js/script.js"></script>
   </head>
-  <body style="background-color: #222222">
-    <img class="bg" src="img/BG.png" />
+  <!-- <body style="background-color: #222222">
     <div class="top-navi">
       <img class="symbol" src="img/Logo.png" />
       <div class="menu-box">
@@ -35,18 +34,269 @@
       </div>
     </div>
     <div class="contents">
-      <div class="main_text">Color<br />Mastery<br />Testing</div>
-      <div class="sub_text">
-        색상 조화와 정확성에 대한 감각을 테스트하고, 배우고, 개선할 수 있도록
-        설계된 반응형 컬러 테스트 플랫폼입니다.<br />사용자들은 다양한 테스트를
-        통해 RGB, CMYK, 색상 조합 등의 이론을 실제로 경험하며 재미있게 학습할 수
-        있습니다.
+      <div class="main_text_2">Color Mastery Testing</div>
+      <div class="sub_text_2">채도를 조정하여<br />색상을 맞춰보세요</div>
+
+      <div class="color-container">
+        <div class="target-color"></div>
+        <div class="user-color"></div>
       </div>
-      <div class="graphic">
-        <img class="main_graphic" src="img/Main_Graphic.png" />
-        <img class="sub_graphic" src="img/Gradation_Orange.png" />
+
+      <div class="next-stage-button">NEXT STAGE →</div>
+
+      <div class="slider-container">
+        <label>Hue</label>
+        <input type="range" id="hue" min="0" max="360" value="0" />
+
+        <label>Saturation</label>
+        <input type="range" id="saturation" min="0" max="100" value="100" />
+
+        <label>Brightness</label>
+        <input type="range" id="brightness" min="0" max="100" value="50" />
+
+        <label>Opacity</label>
+        <input
+          type="range"
+          id="opacity"
+          min="0"
+          max="1"
+          step="0.01"
+          value="1"
+        />
+      </div>
+      <div class="input-section">
+        <div class="input-container">
+          <label for="cmyk-c">CMYK</label>
+          <div class="input-group">
+            <input
+              type="number"
+              id="cmyk-c"
+              min="0"
+              max="100"
+              placeholder="C"
+            />
+            <input
+              type="number"
+              id="cmyk-m"
+              min="0"
+              max="100"
+              placeholder="M"
+            />
+            <input
+              type="number"
+              id="cmyk-y"
+              min="0"
+              max="100"
+              placeholder="Y"
+            />
+            <input
+              type="number"
+              id="cmyk-k"
+              min="0"
+              max="100"
+              placeholder="K"
+            />
+          </div>
+        </div>
+
+        <div class="input-container">
+          <label for="rgb-r">RGB</label>
+          <div class="input-group">
+            <input type="number" id="rgb-r" min="0" max="255" placeholder="R" />
+            <input type="number" id="rgb-g" min="0" max="255" placeholder="G" />
+            <input type="number" id="rgb-b" min="0" max="255" placeholder="B" />
+          </div>
+        </div>
+
+        <div class="input-container hex-container">
+          <label for="hex">HEX</label>
+          <input type="text" id="hex" placeholder="#RRGGBB" />
+        </div>
       </div>
     </div>
-    <a href="index.html" class="start_btn">LET'S MASTER COLORS</a>
+  </body> -->
+  <body style="background-color: #222222">
+    <!-- 네비게이션 바 -->
+    <div class="top-navi">
+      <img class="symbol" src="img/Logo.png" />
+      <div class="menu-box">
+        <div class="top-menu">Home</div>
+        <div class="top-menu">About</div>
+        <div class="top-menu">How to study</div>
+      </div>
+      <div class="right-box">
+        <div class="top-menu">Contact us</div>
+      </div>
+    </div>
+
+    <!-- 메인 콘텐츠 -->
+    <div class="contents">
+      <!-- 단계별 화면 -->
+      <div class="stage" id="stage-1" style="display: block">
+        <div class="main_text_2">Color Mastery Testing</div>
+        <img
+          src="img/number_01.png"
+          style="position: absolute; left: 80px; top: 130px"
+        />
+        <div class="sub_text_2">색조를 조정하여<br />색상을 맞춰보세요</div>
+        <div class="color-container">
+          <div class="target-color" id="target-color-1"></div>
+          <div class="user-color" id="user-color-1"></div>
+        </div>
+        <div class="next-stage-button">NEXT STAGE →</div>
+      </div>
+
+      <div class="stage" id="stage-2" style="display: none">
+        <div class="main_text_2">Color Mastery Testing</div>
+        <img
+          src="img/number_02.png"
+          style="position: absolute; left: 80px; top: 130px"
+        />
+        <div class="sub_text_2">채도를 조정하여<br />색상을 맞춰보세요</div>
+        <div class="color-container">
+          <div class="target-color" id="target-color-2"></div>
+          <div class="user-color" id="user-color-2"></div>
+        </div>
+        <div class="next-stage-button">NEXT STAGE →</div>
+      </div>
+
+      <div class="stage" id="stage-3" style="display: none">
+        <div class="main_text_2">Color Mastery Testing</div>
+        <img
+          src="img/number_03.png"
+          style="position: absolute; left: 80px; top: 130px"
+        />
+        <div class="sub_text_2">밝기를 조정하여<br />색상을 맞춰보세요</div>
+        <div class="color-container">
+          <div class="target-color" id="target-color-3"></div>
+          <div class="user-color" id="user-color-3"></div>
+        </div>
+        <div class="next-stage-button">NEXT STAGE →</div>
+      </div>
+
+      <div class="stage" id="stage-4" style="display: none">
+        <div class="main_text_2">Color Mastery Testing</div>
+        <img
+          src="img/number_04.png"
+          style="position: absolute; left: 80px; top: 130px"
+        />
+        <div class="sub_text_2">CMYK 값을 조정하여<br />색상을 맞춰보세요</div>
+        <div class="color-container">
+          <div class="target-color" id="target-color-4"></div>
+          <div class="user-color" id="user-color-4"></div>
+        </div>
+        <div class="next-stage-button">NEXT STAGE →</div>
+      </div>
+
+      <div class="stage" id="stage-5" style="display: none">
+        <div class="main_text_2">Color Mastery Testing</div>
+        <img
+          src="img/number_05.png"
+          style="position: absolute; left: 80px; top: 130px"
+        />
+        <div class="sub_text_2">RGB 값을 조정하여<br />색상을 맞춰보세요</div>
+        <div class="color-container">
+          <div class="target-color" id="target-color-5"></div>
+          <div class="user-color" id="user-color-5"></div>
+        </div>
+        <div class="next-stage-button">NEXT STAGE →</div>
+      </div>
+
+      <div class="stage" id="stage-6" style="display: none">
+        <div class="main_text_2">Color Mastery Testing</div>
+        <img
+          src="img/number_06.png"
+          style="position: absolute; left: 80px; top: 130px"
+        />
+        <div class="sub_text_2">
+          Hue, Saturation, Brightness를<br />모두 조정해보세요
+        </div>
+        <div class="color-container">
+          <div class="target-color" id="target-color-6"></div>
+          <div class="user-color" id="user-color-6"></div>
+        </div>
+        <div class="next-stage-button">NEXT STAGE →</div>
+      </div>
+
+      <div class="stage" id="stage-7" style="display: none">
+        <div class="main_text_2">Color Mastery Testing</div>
+        <img
+          src="img/number_07.png"
+          style="position: absolute; left: 80px; top: 130px"
+        />
+        <div class="sub_text_2">HEX 코드를 입력하여<br />색상을 맞춰보세요</div>
+        <div class="color-container">
+          <div class="target-color" id="target-color-7"></div>
+          <div class="user-color" id="user-color-7"></div>
+        </div>
+        <!-- <div class="next-stage-button">NEXT STAGE →</div> -->
+        <a href="finish.html" class="next-stage-button">NEXT STAGE →</a>
+      </div>
+
+      <!-- 모든 단계에 공통으로 조절 바와 입력 필드 -->
+      <div class="slider-container">
+        <label>Hue</label>
+        <input type="range" id="hue" min="0" max="360" value="0" />
+
+        <label>Saturation</label>
+        <input type="range" id="saturation" min="0" max="100" value="100" />
+
+        <label>Brightness</label>
+        <input type="range" id="brightness" min="0" max="100" value="50" />
+      </div>
+
+      <div class="input-section">
+        <!-- CMYK 입력 필드 -->
+        <div class="input-container">
+          <label for="cmyk-c">CMYK</label>
+          <div class="input-group">
+            <input
+              type="number"
+              id="cmyk-c"
+              min="0"
+              max="100"
+              placeholder="C"
+            />
+            <input
+              type="number"
+              id="cmyk-m"
+              min="0"
+              max="100"
+              placeholder="M"
+            />
+            <input
+              type="number"
+              id="cmyk-y"
+              min="0"
+              max="100"
+              placeholder="Y"
+            />
+            <input
+              type="number"
+              id="cmyk-k"
+              min="0"
+              max="100"
+              placeholder="K"
+            />
+          </div>
+        </div>
+
+        <!-- RGB 입력 필드 -->
+        <div class="input-container">
+          <label for="rgb-r">RGB</label>
+          <div class="input-group">
+            <input type="number" id="rgb-r" min="0" max="255" placeholder="R" />
+            <input type="number" id="rgb-g" min="0" max="255" placeholder="G" />
+            <input type="number" id="rgb-b" min="0" max="255" placeholder="B" />
+          </div>
+        </div>
+
+        <!-- HEX 입력 필드 -->
+        <div class="input-container hex-container">
+          <label for="hex">HEX</label>
+          <input type="text" id="hex" placeholder="#RRGGBB" />
+        </div>
+      </div>
+    </div>
   </body>
 </html>
