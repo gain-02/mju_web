@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <!-- JQuery Load -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- highchart load -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <!-- CSS Load -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- my script load -->
+    <script src="js/script.js"></script>
+  </head>
+  <body style="background-color: #222222">
+    <img class="bg" src="img/BG.png" />
+    <img class="bg_object" src="img/circle.png" />
+    <!-- 네비게이션 바 -->
+    <div class="top-navi">
+      <img class="symbol" src="img/Logo.png" />
+      <div class="menu-box">
+        <div class="top-menu">Home</div>
+        <div class="top-menu">About</div>
+        <div class="top-menu">How to study</div>
+      </div>
+      <div class="right-box">
+        <div class="top-menu">Contact us</div>
+      </div>
+    </div>
+    <div class="contents_2">
+      <div class="main_text_3">Color Mastery Testing</div>
+      <div class="sub_text_3">
+        모든 단계를 완료하셨습니다! 색상 조정과 이해 능력이 한층 성장했어요.<br />
+        이제 여러분도 컬러 마스터의 길에 한 걸음 더 가까워졌습니다!
+      </div>
+      <div class="graphic">
+        <img class="sub_graphic_2" src="img/Gradation_Orange.png" />
+      </div>
+    </div>
+    <a href="start.html" class="start_btn_2">TRY AGAIN</a>
+    <!-- 마지막에 추가 -->
+    <div class="score_box">
+      <div
+        class="score"
+        id="result"
+        style="position: absolute; bottom: 200px"
+      ></div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        let similarityValues = [];
+
+        // 각 단계별로 저장된 유사도 값을 localStorage에서 가져오기
+        for (let i = 1; i <= 7; i++) {
+          let similarity = localStorage.getItem(`similarity-${i}`);
+          if (similarity !== null) {
+            similarityValues.push(similarity);
+          }
+        }
+
+        // 결과를 finish.html에 표시하기
+        let resultDiv = document.getElementById("result");
+        similarityValues.forEach((value, index) => {
+          let stage = index + 1;
+          let p = document.createElement("p");
+          p.innerHTML = `Stage ${stage} <span class="percentage">${value}%</span>`;
+          resultDiv.appendChild(p);
+        });
+      };
+    </script>
+  </body>
+</html>
